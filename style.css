@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow:hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;    
+}
+
+.map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    margin-top: 50px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cell{
+    width: 100%;
+    max-width: 70px;
+    border: 1px solid rgb(207, 204, 204);
+    aspect-ratio: 1;
+    margin: 2px;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.cell.active{
+    border-color: rgba(0, 0, 0, 0.959);
+    border-width: 2px;
+}
+
+.cell.correct{
+background-color: green;
+color: white;
+}
+.cell.wrong{
+    background-color: rgb(77, 76, 76);
+    color: white;
+}
+.cell.maybe{
+    background-color: orange;
+    color: white;
+}
+
+dialog{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(15, 15, 15, 0.753);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #fff;
+    border: none;
+}
+
+dialog button{
+    padding: 10px 70px;
+    height: 60px;
+    background-color: orangered;
+    color:white;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
